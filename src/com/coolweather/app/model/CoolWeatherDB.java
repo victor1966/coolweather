@@ -99,7 +99,7 @@ public class CoolWeatherDB {
 	public List<County> loadCounties(int cityId){
 		//从数据库中读取全国所有的省份信息
 		List<County> list = new ArrayList<County>();
-		Cursor cursor = db.query("county", null, "city_id = ?",
+		Cursor cursor = db.query("County", null, "city_id = ?",
 				new String[]{String.valueOf(cityId)}, null, null, null);
 		if(cursor.moveToFirst()) {
 			do{
